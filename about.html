@@ -53,7 +53,19 @@
                     <div class="plan1">
                         <h1>Basic</h1>
                         <p>R200 one-time payment</p>
-                        <a href="https://payf.st/xk8ov">Make payment</a>
+                        <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
+                        <input required type="hidden" name="cmd" value="_paynow">
+                        <input required type="hidden" name="receiver" pattern="[0-9]" value="33049095">
+                        <input required type="hidden" name="amount" value="200.00">
+                        <input required type="hidden" name="item_name" maxlength="255" value="Basic">
+                        <table>
+                        <tr>
+                        <td colspan=2 align=center>
+                        <input type="image" src="https://my.payfast.io/images/buttons/BuyNow/Primary-Large-BuyNow.png" alt="Buy Now" title="Buy Now with Payfast">
+                        </td>
+                        </tr>
+                        </table>
+                        </form>
                         <ul>
                             <li>1 month of free maintenance and changes</li>
                             <li>No Custom Domain name<br>(www.your-website-name.pages.dev)</li>
@@ -146,6 +158,7 @@
         </footer>
     </body>
 </html>
+
 
 
 
