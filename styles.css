@@ -7,11 +7,16 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #1b0f1c;
+    background-color: black;
 } 
+#cat_b{
+    background-color: #1b0f1c;
+    border-radius: 0px;
+}
 .page_wrapper{
     position: relative; 
     overflow-x: hidden;
+    background-color: #1b0f1c;
     padding-top: 60px;
 }
 h1 {
@@ -366,7 +371,7 @@ footer{
 }
 #footer_div{
     padding: 40px 40px 0px 40px;
-}
+} 
 .footer1{
     display: flex;
     justify-content:space-between;
@@ -458,7 +463,7 @@ footer{
         padding: 50px 0px 20px 0px;
     }
 }
-#price, .payment {
+#price, .payment, #refund, #subscriptions {
     padding: 50px;
     h1 {
         padding-bottom: 20px;
@@ -497,19 +502,28 @@ footer{
 .plans > div > * {
     margin-top: 5%;
 }
-.plans > div > a {
+.pay_b {
     background-color: #502c53;
     width: 80%;
-    align-self: center;
-    align-content: center;
-    aspect-ratio: 1 / 0.2;
+    margin: 0 auto;
+    display: block;
+
+    aspect-ratio: 5 / 1;
     border-radius: 10px;
+
     font-weight: bold;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    font-size: 1rem;
 }
-.plans > div > a:hover {
-    background-color: #844a89;
-    transition: 0.1s background-color;
+
+.pay_b:hover {
+    background-color: #643067;
 }
+
+
 
 /*Form*/
 .form {
@@ -588,6 +602,7 @@ datalist {
 .thanks{
     padding: 100px 10vw;
     flex-grow: 1;
+    border-radius: 0px;
     p {
         margin-top: 10px;
     }
@@ -602,9 +617,6 @@ datalist {
 }
 
 /*Refund*/
-#refund {
-    padding: 50px;
-}
 /*Terms & Conditions*/
 #terms {
     background-color: white;
@@ -760,7 +772,7 @@ datalist {
     #footer_catalogue{
         margin-bottom: 20px;
     }
-    .footer1 > div > p, .footer1 > div > a, .footer1 > div > p > a {
+    .footer1 > div > p, .footer1 > div > a  {
         font-size: 3vw;
     }
     .footer1 > div > img {
@@ -782,6 +794,4 @@ datalist {
             font-size: 4.55vw;
         }
     }
-
 }
-
