@@ -116,14 +116,17 @@
                             <input type="hidden" name="receiver" value="33049095">
 
                             <input type="hidden" name="item_name" value="Monthly Plan">
-                            <input type="hidden" name="item_description" value="***">
+                            <input type="hidden" name="item_description" 
+                            value="Monthly Plan is a subscription plan that includes 1 year of free maintenance and changes, a Custom Domain name, Video Support, and more.">
 
                             <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
                             <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
                             <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
 
-                            <input type="hidden" name="subscription_type" value="2">
+                            <input type="hidden" name="subscription_type" value="1">
                             <input type="hidden" name="amount" value="30.00">
+                            <input type="hidden" name="frequency" value="3">
+                            <input type="hidden" name="cycles" value="0">
 
                             <!-- USER MUST CLICK THIS BUTTON -->
                             <button type="submit" class="pay_b">Subscribe</button>
@@ -140,20 +143,21 @@
                     </div>
                     <div class="plan4">
                         <h1>Yearly</h1>
-                        <p>R300/yearly</p>
+                        <p>R320/yearly</p>
                         <form action="https://payment.payfast.io/eng/process" method="post">
                             <input type="hidden" name="cmd" value="_paynow">
                             <input type="hidden" name="receiver" value="33049095">
 
                             <input type="hidden" name="item_name" value="Yearly Plan">
-                            <input type="hidden" name="item_description" value="***">
+                            <input type="hidden" name="item_description" 
+                            value="Yearly Plan is a subscription plan that includes 1 year of free maintenance and changes, a Custom Domain name, Video Support, and more.">
 
                             <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
                             <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
                             <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
 
                             <input type="hidden" name="subscription_type" value="2">
-                            <input type="hidden" name="amount" value="300.00">
+                            <input type="hidden" name="amount" value="320.00">
 
                             <!-- USER MUST CLICK THIS BUTTON -->
                             <button type="submit" class="pay_b">Subscribe</button>
@@ -180,13 +184,27 @@
                 <div class="line"></div>
                 <div id="l2" class="line"></div>
                 <h1>Subscription Plans</h1>
-                <p>Upon subscribing to a plan, a confirmation email will be sent to the provided email address for 
-                    each billing cycle (monthly or yearly, depending on the selected plan).<br>
-                    Payment must be confirmed by the user for each billing period. 
-                    If confirmation is not received within 30 days, a reminder email will be sent.<br>
-                    If payment is still not confirmed within 24 hours after the reminder, the service will be 
-                    suspended until the outstanding payment is completed.
-                </p>
+                <h2>Monthly Plan</h2>
+                <ul>
+                    <li>For the monthly plan, a notification email will be 
+                    sent to the registered email address to inform the customer of any price changes.</li>
+                    <li>The customer is required to confirm the updated subscription by resubscribing through 
+                    the website. A reminder email will be sent on the next billing date if confirmation 
+                    has not been received.</li>
+                    <li>If the customer does not resubscribe within 30 days of the billing date, the service 
+                    will be suspended until payment is completed.</li>
+                    <li>Billing will continue during the suspension period, and reminder emails will be 
+                    sent on each billing cycle until the subscription is reactivated.</li>
+                </ul>
+                <h2>Yearly Plan</h2>
+                <ul>
+                    <li>Upon subscribing to the yearly plan, a confirmation billing email will be sent to 
+                    the provided email address yearly.</li>
+                    <li>Payment must be confirmed by the user for each billing period. 
+                    If confirmation is not received within 24 hours, a reminder email will be sent.</li>
+                    <li>If payment is still not confirmed within 24 hours after the reminder, the service will be 
+                    suspended until the outstanding payment is completed.</li>
+                </ul>
             </div>
             <div id="refund">
                 <div id="l1" class="line"></div>
