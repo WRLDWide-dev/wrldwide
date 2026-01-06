@@ -58,7 +58,7 @@ const totalWidth = track.scrollWidth / 2; // half because we duplicated the imag
 // GSAP infinite horizontal scroll
 gsap.to(track, {
   x: -totalWidth,       // move left across its total width
-  duration: 40,         // slower/faster scroll
+  duration: 30,         // slower/faster scroll
   ease: "none",         // constant speed
   repeat: -1,           // infinite
   modifiers: {
