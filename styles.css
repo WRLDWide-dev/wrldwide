@@ -714,7 +714,7 @@ datalist {
     h2 {
         font-size: 1.7rem;
     }
-    p {
+    p, li {
         font-size: 1.8rem;
     }
     .flex_intro > div > p:first-child{
@@ -785,7 +785,7 @@ datalist {
     #footer_catalogue{
         margin-bottom: 20px;
     }
-    .footer1 > div > p, .footer1 > div > a  {
+    .footer1 > div > p, .footer1 > div > a, .footer1 > div > p > a, #footer3 > a {
         font-size: 3vw;
     }
     .footer1 > div > img {
