@@ -6,6 +6,9 @@
     font-size: calc(7.5px + 1vw);
     box-sizing: border-box;
 }
+:root {
+  color-scheme: light;
+}
 body {
     background-color: black;
 } 
@@ -808,3 +811,4 @@ datalist {
         }
     }
 }
+
