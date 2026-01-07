@@ -714,7 +714,7 @@ datalist {
     h2 {
         font-size: 1.7rem;
     }
-    p, li {
+    p, li, strong {
         font-size: 1.8rem;
     }
     .flex_intro > div > p:first-child{
