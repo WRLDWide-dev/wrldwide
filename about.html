@@ -38,10 +38,9 @@
                 <div class="line"></div>
                 <div id="l2" class="line"></div>
                 <h1>Your Website, Your Payment Plan</h1>
-                <p>Choose a package that fits your budget now and in the future, 
+                <p>Choose a plan that fits your budget now and in the future, 
                     while also meeting the features and specifications you want for your website.
-                    We offer once-off payment options without a custom domain name, as well 
-                    as subscription packages that include a custom domain name.
+                    We offer various subscription plans.
                 </p>
                 <div id="lbottom1" class="line"></div>
                 <div class="line bottom"></div>
@@ -49,84 +48,34 @@
             </div>
             <div id="price">
                 <h1>Packages</h1>
+                <div id="radios">
+                    <div>
+                        <input type="radio" id="monthly" name="plan_type" value="monthly" checked>
+                        <label for="monthly">Monthly Plans</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="yearly" name="plan_type" value="yearly">
+                        <label for="yearly">Yearly Plans</label>
+                    </div>
+                </div>
                 <div class="plans">
                     <div class="plan1">
                         <h1>Basic</h1>
-                        <p>R300 one-time payment</p>
-                        <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                            <input type="hidden" name="cmd" value="_paynow">
-                            <input type="hidden" name="receiver" value="33049095">
-
-                            <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
-                            <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
-                            <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
-
-                            <input type="hidden" name="amount" value="300.00">
-                            <input type="hidden" name="item_name" value="Basic Plan">
-                            <input type="hidden" name="item_description"
-                                value="Basic Plan is a one-time payment that includes 1 month of free maintenance and changes, a secure website, web hosting, and more.">
-                            <button type="submit" class="pay_b">
-                                Pay Now
-                            </button>
-                        </form>
-                        <ul>
-                            <li>1 month of free maintenance and changes</li>
-                            <li>No Custom Domain name<br>(www.your-website-name.pages.dev)</li>
-                            <li>Secure website</li>
-                            <li>Web hosting</li>
-                            <li>Does not accept payments</li>
-                            <li>5GB of Image Storage</li>
-                            <li>No Video Support</li>
-                            <li>Logo Design</li>
-                        </ul>
-                    </div>
-                    <div class="plan2">
-                        <h1>Premium</h1>
-                        <p>R400 one-time payment</p>
-                        <form name="PayFastPayNowForm" action="https://payment.payfast.io/eng/process" method="post">
-                            <input type="hidden" name="cmd" value="_paynow">
-                            <input type="hidden" name="receiver" value="33049095">
-
-                            <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
-                            <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
-                            <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
-
-                            <input type="hidden" name="amount" value="400.00">
-                            <input type="hidden" name="item_name" value="Premium Plan">
-                            <input type="hidden" name="item_description"
-                                value="Premium Plan is a one-time payment that includes 6 month of free maintenance and changes, video support, 10GB of Media Storage, and more.">
-                            <button type="submit" class="pay_b">
-                                Pay Now
-                            </button>
-                        </form>
-                        <ul>
-                            <li>6 months of free maintenance and changes</li>
-                            <li>No Custom Domain name<br>(www.your-website-name.pages.dev)</li>
-                            <li>Secure website</li>
-                            <li>Web Hosting</li>
-                            <li>Does not accept payments</li>
-                            <li>Video (MP3, WebM, OGV, etc.) support</li>
-                            <li>10GB of Media Storage</li>
-                            <li>Logo Design</li>
-                        </ul>
-                    </div>
-                    <div class="plan3">
-                        <h1>Monthly</h1>
-                        <p>R45/month</p>
+                        <p class="price" data-monthly="30" data-yearly="350">R30/month</p>
                         <form action="https://payment.payfast.io/eng/process" method="post">
                             <input type="hidden" name="cmd" value="_paynow">
                             <input type="hidden" name="receiver" value="33049095">
 
-                            <input type="hidden" name="item_name" value="Monthly Plan">
-                            <input type="hidden" name="item_description" 
-                            value="Monthly Plan is a subscription plan that includes 1 year of free maintenance and changes, a Custom Domain name, Video Support, and more.">
-
+                            <input type="hidden" name="item_name" value="Basic Plan">
+                            <input type="hidden" name="item_description"
+                                value="Basic Plan is a one-time payment that includes 1 month of free maintenance and changes, a secure website, web hosting, and more.">
+                            
                             <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
                             <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
                             <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
 
                             <input type="hidden" name="subscription_type" value="1">
-                            <input type="hidden" name="amount" value="45.00">
+                            <input type="hidden" name="amount" value="30.00">
                             <input type="hidden" name="frequency" value="3">
                             <input type="hidden" name="cycles" value="0">
 
@@ -134,57 +83,95 @@
                             <button type="submit" class="pay_b">Subscribe</button>
                         </form>
                         <ul>
-                            <li>1 year of free maintenance and changes</li>
+                            <li>1 month of free maintenance and changes</li>
                             <li>Custom Domain name (.co.za)</li>
                             <li>Secure website</li>
-                            <li>Web Hosting</li>
-                            <li>Accept payments</li>
-                            <li>Video (MP3, WebM, OGV, etc.) support</li>
-                            <li>10GB of Media Storage</li>
+                            <li>Web hosting</li>
+                            <li>5GB of Image Storage</li>
+                            <li>Image Support</li>
                             <li>Logo Design</li>
+                            <li>Reviews Integration</li>
+                            <li>6 Pages</li>
                         </ul>
                     </div>
-                    <div class="plan4">
-                        <h1>Yearly</h1>
-                        <p>R500/year</p>
+                    <div class="plan2">
+                        <h1>Core</h1>
+                        <p class="price" data-monthly="40" data-yearly="450">R40/month</p>
                         <form action="https://payment.payfast.io/eng/process" method="post">
                             <input type="hidden" name="cmd" value="_paynow">
                             <input type="hidden" name="receiver" value="33049095">
 
-                            <input type="hidden" name="item_name" value="Yearly Plan">
-                            <input type="hidden" name="item_description" 
-                            value="Yearly Plan is a subscription plan that includes 1 year of free maintenance and changes, a Custom Domain name, Video Support, and more.">
-
+                            <input type="hidden" name="item_name" value="Core Plan">
+                            <input type="hidden" name="item_description"
+                                value="The Core Plan is a subscription plan that includes 6 month of free maintenance and changes, video support, 10GB of Media Storage, and more.">
+                            
                             <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
                             <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
                             <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
 
                             <input type="hidden" name="subscription_type" value="1">
-                            <input type="hidden" name="amount" value="500.00">
-                            <input type="hidden" name="frequency" value="6">
+                            <input type="hidden" name="amount" value="40.00">
+                            <input type="hidden" name="frequency" value="3">
                             <input type="hidden" name="cycles" value="0">
 
                             <!-- USER MUST CLICK THIS BUTTON -->
                             <button type="submit" class="pay_b">Subscribe</button>
                         </form>
                         <ul>
-                            <li>1 year of free maintenance and changes</li>
+                            <li>6 months of free maintenance and changes</li>
                             <li>Custom Domain name (.co.za)</li>
                             <li>Secure website</li>
                             <li>Web Hosting</li>
-                            <li>Accept payments</li>
-                            <li>Video (MP3, WebM, OGV, etc.) support</li>
                             <li>10GB of Media Storage</li>
+                            <li>Video (MP3, WebM, OGV, etc.) Support</li>
+                            <li>Image Support</li>
                             <li>Logo Design</li>
+                            <li>Reviews Integration</li>
+                            <li>Maps Integration</li>
+                            <li>10 Pages</li>
+                        </ul>
+                    </div>
+                    <div class="plan3">
+                        <h1>Premium</h1>
+                        <p class="price" data-monthly="50" data-yearly="550">R50/month</p>
+                        <form action="https://payment.payfast.io/eng/process" method="post">
+                            <input type="hidden" name="cmd" value="_paynow">
+                            <input type="hidden" name="receiver" value="33049095">
+
+                            <input type="hidden" name="item_name" value="Premium Plan">
+                            <input type="hidden" name="item_description" 
+                            value="The Premium Plan is a subscription plan that includes 2 years of free maintenance and changes, a Custom Domain name, Video Support, and more.">
+
+                            <input type="hidden" name="return_url" value="https://www.wrldwide.co.za/payment-made">
+                            <input type="hidden" name="cancel_url" value="https://www.wrldwide.co.za/about#price">
+                            <input type="hidden" name="notify_url" value="https://www.wrldwide.co.za/notify.php">
+
+                            <input type="hidden" name="subscription_type" value="1">
+                            <input type="hidden" name="amount" value="50.00">
+                            <input type="hidden" name="frequency" value="3"> <!-- 6 for yearly-->
+                            <input type="hidden" name="cycles" value="0">
+
+                            <!-- USER MUST CLICK THIS BUTTON -->
+                            <button type="submit" class="pay_b">Subscribe</button>
+                        </form>
+                        <ul>
+                            <li>2 years of free maintenance and changes</li>
+                            <li>Custom Domain name (.co.za)</li>
+                            <li>Secure website</li>
+                            <li>Web Hosting</li>
+                            <li>10GB of Media Storage</li>
+                            <li>Video (MP3, WebM, OGV, etc.) Support</li>
+                            <li>Image Support</li>
+                            <li>Logo Design</li>
+                            <li>Reviews Integration</li>
+                            <li>Maps Integration</li>
+                            <li>Accept payments</li>
+                            <li>Infinite Pages</li>
                         </ul>
                     </div>
                 </div>
+                <p>By completing this payment, you agree to the WRLDWide Terms & Conditions.</p>
             </div>
-            <script>
-                const today = new Date().toISOString().split("T")[0];
-                document.getElementById("billing_date_monthly").value = today;
-                document.getElementById("billing_date_yearly").value = today;
-            </script>
             <div id="subscriptions">
                 <div id="l1" class="line"></div>
                 <div class="line"></div>
@@ -233,7 +220,6 @@
                         <p class="footer_heading3">Contact</p>
                         <p>EMAIL: wrldwide.development@gmail.com</p>
                         <p><a href="https://www.facebook.com/profile.php?id=61585309502838">FACEBOOK:</a> WRLDWide</p>
-                        <p>PHONE NUMBER: 062 780 4574</p>
                     </div>
                     <div class="footer_items" id="footer_catalogue">
                         <p class="footer_heading3">Catalogue</p>
@@ -250,6 +236,52 @@
             </div>
         </footer>
     </body>
+    <script>
+        const monthlyRadio = document.getElementById("monthly");
+        const yearlyRadio = document.getElementById("yearly");
+        const plans = document.querySelectorAll(".plan1, .plan2, .plan3");
+
+        function setMonthly() {
+        plans.forEach(plan => {
+            const priceEl = plan.querySelector(".price");
+            const amountInput = plan.querySelector('input[name="amount"]');
+            const frequencyInput = plan.querySelector('input[name="frequency"]');
+
+            const monthlyPrice = priceEl.dataset.monthly;
+
+            priceEl.textContent = `R${monthlyPrice}/month`;
+            amountInput.value = monthlyPrice;
+            frequencyInput.value = "3";
+        });
+        }
+
+        function setYearly() {
+        plans.forEach(plan => {
+            const priceEl = plan.querySelector(".price");
+            const amountInput = plan.querySelector('input[name="amount"]');
+            const frequencyInput = plan.querySelector('input[name="frequency"]');
+
+            const yearlyPrice = priceEl.dataset.yearly;
+
+            priceEl.textContent = `R${yearlyPrice}/year`;
+            amountInput.value = yearlyPrice;
+            frequencyInput.value = "6";
+        });
+        }
+
+        function syncPricing() {
+        if (yearlyRadio.checked) {
+            setYearly();
+        } else {
+            setMonthly();
+        }
+        }
+
+        monthlyRadio.addEventListener("change", setMonthly);
+        yearlyRadio.addEventListener("change", setYearly);
+
+        document.addEventListener("DOMContentLoaded", syncPricing);
+        window.addEventListener("pageshow", syncPricing);
+
+    </script>
 </html>
-
-
