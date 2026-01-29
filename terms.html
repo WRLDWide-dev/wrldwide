@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Learn how WRLDWide builds websites from start to launch. Discover our process and flexible pricing packages for businesses.">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-        <script src="common.js" defer></script>
         <link rel="icon" type="image/x-icon" href="images/Logo Square.png"></link>
     </head>
     <body class="body_thanks">
@@ -202,4 +201,36 @@
             </div>
         </footer>
     </body>
+    <script>  
+        const contactLink = document.getElementById("email");
+        const email = "wrldwide.development@gmail.com";
+
+        const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+        if (isMobile) {
+            // Mobile → open email app
+            contactLink.href = `mailto:${email}`;
+        } else {
+            // Desktop → open Gmail compose
+            contactLink.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`;
+            contactLink.target = "_blank";
+        }
+        
+        const links = document.querySelectorAll('.nav-link-item');
+        const current = window.location.pathname.split('/').pop();
+
+        links.forEach(link => {
+            if (link.getAttribute('href') === current) {
+                link.classList.add('active');
+            }
+        });
+
+        const hamburger = document.getElementById("hamburger");
+        const navLinks = document.getElementById("nav-links");
+        const nav = document.querySelector('nav');
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navLinks.classList.toggle("active");
+        });
+    </script>
 </html>
